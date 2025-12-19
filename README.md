@@ -1,47 +1,41 @@
-# The Hilbert Substrate: Optical Computing Framework
+# PES: The Photoelectric Switch Engine
+### A Physics-Compliant Holographic Memory & Optical Logic Simulator
 
-**A simulation framework for Phase-Conjugate Optical Memory and Logic.**
-*Licensed under Apache 2.0*
+![Holographic Interference Field](holographic_art.jpg)
+*Figure 1: Visualization of phase dispersion and wave interference within the resonant cavity. Generated via `holographic_art.py`.*
 
-## Overview
-The Hilbert Substrate is a proof-of-concept engine for **Optical Computing**. It simulates a hardware architecture that replaces binary logic (0/1) with holographic wavefronts (constructive/destructive interference).
+## 🔭 Overview
+**PES (Photoelectric Switch)** is a Python-based simulation engine that models next-generation optical computing architectures. Unlike standard neural networks that abstract away the hardware, PES simulates the underlying physics of light—specifically **Phase Dispersion**, **Wave Interference**, and **Resonant Cavities**.
 
-While modern silicon hits thermal limits at ~5GHz, this architecture leverages the superposition of light to perform massively parallel operations (matrix multiplication, search, and logic) at Terahertz frequencies with negligible heat generation.
+This project demonstrates how **Fourier Keying** can be used to store orthogonal data patterns in a dispersive optical medium, essentially turning light waves into addressable memory slots. It serves as the computational implementation of the theoretical framework described in *[The Hilbert Substrate Framework](The%20Hilbert%20Substrate%20Framework.pdf)*.
 
-## Key Features
+## 🚀 Key Capabilities
 
-### 1. The PES (Photo-Electric Switch)
-A software simulation of a 64-channel resonant cavity.
-- **Throughput:** Simulates 64 parallel channels interacting simultaneously (vs. sequential binary).
-- **Architecture:** Uses Fourier Optics to encode data in the frequency domain, not just intensity.
+* **Holographic Content-Addressable Memory (CAM):** Stores and retrieves patterns using wave interference rather than address pointers.
+* **Dispersion Compensation:** Implements a "Phase Lens" algorithm to untwist signal distortion caused by cavity resonance.
+* **Optical ALU (Arithmetic Logic Unit):** Performs boolean logic (XOR, AND) purely through constructive and destructive interference of optical fields.
+* **Steganographic "Glass Safe":** Encrypts data within phase noise, retrievable only with a precise floating-point dispersion key (e.g., `k=7.532`).
+* **Self-Healing Optics:** Uses an "Entanglement Optimizer" (Stochastic Annealing) to blindly correct phase drift in imperfect crystals.
+* **Fourier Diffusion Security:** Implements frequency-domain encryption, ensuring data is physically irretrievable without the phase key (resistant to intensity-based attacks).
 
-### 2. Optical Logic (ALU)
-Proof that light can perform Turing-complete logic without transistors.
-- **XOR Gate:** Implemented via Destructive Interference ($1 + (-1) = 0$).
-- **AND Gate:** Implemented via Amplitude Thresholding.
-- **Efficiency:** Logic operations consume zero power in the switch itself (energy is redirected, not dissipated as heat).
-
-### 3. Strobe Optimization (The "Yield Fix")
-A novel algorithm to calibrate imperfect hardware.
-- **Problem:** Grown optical crystals have microscopic defects that ruin coherence.
-- **Solution:** A customized Simulated Annealing engine ("Strobe Optimizer") that blindly tunes the phase array to correct for hardware drift in real-time.
-- **Result:** Recovers **93% signal coherence** from a heavily defective crystal simulation.
-
-### 4. Fourier Security
-A physical encryption layer resistant to standard attacks.
-- **Mechanism:** Data is dispersed across the frequency spectrum using FFT (Fast Fourier Transform).
-- **Defense:** Resistant to "Brute Force" intensity attacks. Without the exact Phase Key, the signal appears as Gaussian white noise.
-
-## Repository Structure
+## 📂 Repository Structure
 
 | File | Description |
 | :--- | :--- |
-| `holographic_core.py` | The physics engine. Simulates wave interference and resonant cavities. |
-| `optical_logic.py` | The ALU. Demonstrates XOR/AND gates using wave superposition. |
-| `holographic_entanglement.py` | The Autopilot. Optimizes phase alignment for imperfect hardware. |
-| `holographic_diffusion.py` | The Vault. Demonstrates Fourier-domain encryption and decryption. |
+| `holographic_core.py` | **The Engine.** Contains the `ResonantCavity` and `HolographicField` classes that simulate the physics of the optical medium. |
+| `optical_logic.py` | **The CPU.** Demonstrates optical logic gates (XOR) by colliding inverted waveforms to achieve 0.0 energy states. |
+| `holographic_entanglement.py` | **The Repairman.** An auto-focus engine that uses strobe optimization to fix signal decoherence in real-time. |
+| `holographic_diffusion.py` | **The Patch.** Upgrades the crypto layer to use Fourier Diffusion, making the "Glass Safe" mathematically secure against brute force. |
+| `holographic_stress_test.py` | **The Audit.** Pushes the system to the Nyquist limit ($N=64$) to demonstrate the physical capacity wall of the medium. |
+| `optical_crypto.py` | **The Vault.** A steganography demo showing how data is hidden in phase noise and retrieved via high-precision keys. |
+| `holographic_art.py` | **The Visualization.** Generates the spectral interference plots (like the header image) to visualize the internal state of the memory. |
 
-## Quick Start
-1. **Clone the repo:**
-   ```bash
-   git clone [https://github.com/intersection-dynamics/hilbert_substrate.git](https://github.com/intersection-dynamics/hilbert_substrate.git)
+## 🛠️ Quick Start
+
+### Prerequisites
+* Python 3.8+
+* PyTorch (for tensor operations)
+* Matplotlib (for visualization)
+
+```bash
+pip install torch numpy matplotlib
